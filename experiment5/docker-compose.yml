@@ -1,0 +1,11 @@
+version: '2'
+services:
+  service101:
+    restart: always
+    container_name: "container101"
+    build : .
+    ports:
+      - "9000:5000"
+    command : python app.py 
+    volumes:
+      - /c/resource:/data
